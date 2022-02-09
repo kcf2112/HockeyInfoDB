@@ -11,7 +11,11 @@ import SwiftUI
 struct HockeyInfoDBApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ScheduleView()
+            .onAppear
+            {
+                UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+            }
         }
     }
 }
